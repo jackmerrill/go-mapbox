@@ -2,9 +2,9 @@
 
 Mapbox API wrappers for Golang
 
-[![Documentation](https://img.shields.io/badge/docs-godoc-blue.svg)](https://godoc.org/github.com/ryankurte/go-mapbox/lib)
-[![GitHub tag](https://img.shields.io/github/tag/ryankurte/go-mapbox.svg)](https://github.com/ryankurte/go-mapbox)
-[![Build Status](https://travis-ci.org/ryankurte/go-mapbox.svg?branch=master)](https://travis-ci.org/ryankurte/go-mapbox)
+[![Documentation](https://img.shields.io/badge/docs-godoc-blue.svg)](https://godoc.org/github.com/jackmerrill/go-mapbox/lib)
+[![GitHub tag](https://img.shields.io/github/tag/jackmerrill/go-mapbox.svg)](https://github.com/jackmerrill/go-mapbox)
+[![Build Status](https://travis-ci.org/jackmerrill/go-mapbox.svg?branch=master)](https://travis-ci.org/jackmerrill/go-mapbox)
 
 See [here](https://golanglibs.com/top?q=mapbox) for other golang/mapbox projects.
 
@@ -12,16 +12,16 @@ See [here](https://golanglibs.com/top?q=mapbox) for other golang/mapbox projects
 
 Very early WIP, pull requests and issues are most welcome. See [lib/geocode/](lib/geocode) or [lib/directions/](lib/directions) for an example module to mimic.
 
-Because Travis-CI does not expose the build environment to untrusted branches (ie. Pull Requests) tests have to be manually prompted by a repository admin then force merged. Don't panic when your local tests pass but travis fails with "Mapbox API token not found", we will manually run them as soon as possible. See issue [#10](https://github.com/ryankurte/go-mapbox/issues/10) for more information.
+Because Travis-CI does not expose the build environment to untrusted branches (ie. Pull Requests) tests have to be manually prompted by a repository admin then force merged. Don't panic when your local tests pass but travis fails with "Mapbox API token not found", we will manually run them as soon as possible. See issue [#10](https://github.com/jackmerrill/go-mapbox/issues/10) for more information.
 
 ### Modules
 
-- [X] Geocoding
-- [X] Directions
-- [X] Directions Matrix
-- [X] Map Matching
+- [x] Geocoding
+- [x] Directions
+- [x] Directions Matrix
+- [x] Map Matching
 - [ ] Styles
-- [X] Maps
+- [x] Maps
 - [ ] Static
 - [ ] Datasets
 
@@ -32,8 +32,8 @@ Because Travis-CI does not expose the build environment to untrusted branches (i
 ```go
 // Import the core module (and any required APIs)
 import (
-    "gopkg.in/ryankurte/go-mapbox.v0/lib"
-    "gopkg.in/ryankurte/go-mapbox.v0/lib/base"
+    "gopkg.in/jackmerrill/go-mapbox.v0/lib"
+    "gopkg.in/jackmerrill/go-mapbox.v0/lib/base"
 )
 
 // Fetch token from somewhere
@@ -45,9 +45,10 @@ mapBox := mapbox.NewMapbox(token)
 ```
 
 ### Map API
-``` go
+
+```go
 import (
-    "gopkg.in/ryankurte/go-mapbox.v0/lib/maps"
+    "gopkg.in/jackmerrill/go-mapbox.v0/lib/maps"
 )
 
 img, err := mapBox.Maps.GetTiles(maps.MapIDSatellite, 1, 0, 0, maps.MapFormatJpg90, true)
@@ -57,7 +58,7 @@ img, err := mapBox.Maps.GetTiles(maps.MapIDSatellite, 1, 0, 0, maps.MapFormatJpg
 
 ```go
 import (
-    "gopkg.in/ryankurte/go-mapbox.v0/lib/geocode"
+    "gopkg.in/jackmerrill/go-mapbox.v0/lib/geocode"
 )
 
 // Forward Geocoding
@@ -83,7 +84,7 @@ reverse, err := mapBox.Geocode.Reverse(loc, &reverseOpts)
 
 ```go
 import (
-    "gopkg.in/ryankurte/go-mapbox.v0/lib/directions"
+    "gopkg.in/jackmerrill/go-mapbox.v0/lib/directions"
 )
 
 var directionOpts directions.RequestOpts
@@ -104,4 +105,3 @@ directions, err := mapBox.Directions.GetDirections(locs, directions.RoutingCycli
 ---
 
 If you have any questions, comments, or suggestions, feel free to open an issue or a pull request.
-

@@ -3,7 +3,7 @@
  * Naive Spherical Mercator (EPSG:3857) Implementation
  * See http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames for examples
  *
- * https://github.com/ryankurte/go-mapbox
+ * https://github.com/jackmerrill/go-mapbox
  * Copyright 2017 Ryan Kurte
  */
 

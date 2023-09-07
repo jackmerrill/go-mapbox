@@ -3,7 +3,7 @@
  * See https://www.mapbox.com/api-documentation/#maps for API information
  * Run: go test -v  -run ^TestTiles$ && open /tmp/mapbox-tile-test-*.jpg
  *
- * https://github.com/ryankurte/go-mapbox
+ * https://github.com/jackmerrill/go-mapbox
  * Copyright 2017 Ryan Kurte
  */
 
@@ -16,7 +16,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/ryankurte/go-mapbox/lib/base"
+	"github.com/jackmerrill/go-mapbox/lib/base"
 )
 
 func TestTiles(t *testing.T) {

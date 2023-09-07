@@ -3,7 +3,7 @@
  * Wraps the mapbox directions API for server side use
  * See https://www.mapbox.com/api-documentation/#retrieve-directions for API information
  *
- * https://github.com/ryankurte/go-mapbox
+ * https://github.com/jackmerrill/go-mapbox
  * Copyright 2017 Ryan Kurte
  */
 
@@ -14,7 +14,7 @@ import (
 	"strings"
 
 	"github.com/google/go-querystring/query"
-	"github.com/ryankurte/go-mapbox/lib/base"
+	"github.com/jackmerrill/go-mapbox/lib/base"
 )
 
 const (
@@ -131,6 +131,10 @@ func (o *RequestOpts) SetAnnotations(annotations []AnnotationType) {
 
 // GetDirections between a set of locations using the specified routing profile
 func (g *Directions) GetDirections(locations []base.Location, profile RoutingProfile, opts *RequestOpts) (*DirectionResponse, error) {
+	if opts.Geometries == nil {
+		opts.Geometries = new(GeometryType)
+		*opts.Geometries = GeometryGeojson
+	}
 
 	v, err := query.Values(opts)
 	if err != nil {

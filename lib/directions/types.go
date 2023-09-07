@@ -3,7 +3,7 @@
  * Wraps the mapbox directions API for server side use
  * See https://www.mapbox.com/api-documentation/#retrieve-directions for API information
  *
- * https://github.com/ryankurte/go-mapbox
+ * https://github.com/jackmerrill/go-mapbox
  * Copyright 2017 Ryan Kurte
  */
 
@@ -17,12 +17,17 @@ type DirectionResponse struct {
 	Routes    []Route
 }
 
+type RouteGeometry struct {
+	Coordinates [][]float64
+	Type        string
+}
+
 // Route A route through (potentially multiple) waypoints.
 // https://www.mapbox.com/api-documentation/#route-object
 type Route struct {
 	Distance float64
 	Duration float64
-	Geometry string
+	Geometry RouteGeometry
 	Legs     []RouteLeg
 }
 
@@ -89,7 +94,7 @@ type Intersection struct {
 }
 
 // Lane
-//https://www.mapbox.com/api-documentation/#lane-object
+// https://www.mapbox.com/api-documentation/#lane-object
 type Lane struct {
 	Valid      bool
 	Indicatons []string

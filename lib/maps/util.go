@@ -3,7 +3,7 @@
  * Utilities and Helpers for dealing with maps and map tiles
  * See https://www.mapbox.com/api-documentation/#maps for API information
  *
- * https://github.com/ryankurte/go-mapbox
+ * https://github.com/jackmerrill/go-mapbox
  * Copyright 2017 Ryan Kurte
  */
 
@@ -19,7 +19,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/ryankurte/go-mapbox/lib/base"
+	"github.com/jackmerrill/go-mapbox/lib/base"
 )
 
 // LocationToTileID converts a lat/lon location into a tile ID

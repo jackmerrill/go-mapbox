@@ -3,7 +3,7 @@
  * Wraps the mapbox directions API for server side use
  * See https://www.mapbox.com/api-documentation/#retrieve-a-matrix for API information
  *
- * https://github.com/ryankurte/go-mapbox
+ * https://github.com/jackmerrill/go-mapbox
  * Copyright 2017 Ryan Kurte
  */
 
@@ -12,10 +12,8 @@ package directionsmatrix
 import (
 	"os"
 	"testing"
-)
 
-import (
-	"github.com/ryankurte/go-mapbox/lib/base"
+	"github.com/jackmerrill/go-mapbox/lib/base"
 )
 
 func TestDirectionsMatrix(t *testing.T) {

@@ -3,16 +3,15 @@ package mapbox
 import (
 	"os"
 	"testing"
-)
 
-// Import the core module and any required APIs
-import (
-	"github.com/ryankurte/go-mapbox/lib/base"
-	"github.com/ryankurte/go-mapbox/lib/directions"
-	"github.com/ryankurte/go-mapbox/lib/directions_matrix"
-	"github.com/ryankurte/go-mapbox/lib/geocode"
-	"github.com/ryankurte/go-mapbox/lib/map_matching"
-	"github.com/ryankurte/go-mapbox/lib/maps"
+	"github.com/jackmerrill/go-mapbox/lib/base"
+	"github.com/jackmerrill/go-mapbox/lib/directions" // Import the core module and any required APIs
+
+	directionsmatrix "github.com/jackmerrill/go-mapbox/lib/directions_matrix"
+	"github.com/jackmerrill/go-mapbox/lib/geocode"
+
+	mapmatching "github.com/jackmerrill/go-mapbox/lib/map_matching"
+	"github.com/jackmerrill/go-mapbox/lib/maps"
 )
 
 func TestMaps(t *testing.T) {

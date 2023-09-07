@@ -3,7 +3,7 @@
  * Wraps the mapbox Map Matching API for server side use
  * See https://www.mapbox.com/api-documentation/#retrieve-a-match for API information
  *
- * https://github.com/ryankurte/go-mapbox
+ * https://github.com/jackmerrill/go-mapbox
  * Copyright 2017 Ryan Kurte
  */
 
@@ -14,7 +14,7 @@ import (
 	"strings"
 
 	"github.com/google/go-querystring/query"
-	"github.com/ryankurte/go-mapbox/lib/base"
+	"github.com/jackmerrill/go-mapbox/lib/base"
 )
 
 const (

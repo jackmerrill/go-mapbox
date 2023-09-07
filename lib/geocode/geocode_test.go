@@ -3,7 +3,7 @@
  * Wraps the mapbox geocoding API for server side use
  * See https://www.mapbox.com/api-documentation/#geocoding for API information
  *
- * https://github.com/ryankurte/go-mapbox
+ * https://github.com/jackmerrill/go-mapbox
  * Copyright 2017 Ryan Kurte
  */
 
@@ -14,10 +14,8 @@ import (
 	"reflect"
 	"strings"
 	"testing"
-)
 
-import (
-	"github.com/ryankurte/go-mapbox/lib/base"
+	"github.com/jackmerrill/go-mapbox/lib/base"
 )
 
 func TestGeocoder(t *testing.T) {
